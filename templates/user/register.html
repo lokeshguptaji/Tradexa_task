@@ -1,0 +1,51 @@
+{% extends 'user/base.html' %}
+
+{% block style %}
+
+{% endblock %}
+
+{% block body %}
+<div class="l-form">
+            <form action="" class="form" method="post">
+                <h1 class="form__title">Sign Up</h1>
+
+                 {% csrf_token %}
+                <div class="form__div">
+                  <input type="text" name="first_name" class="form__input" placeholder=" ">
+                  <label for="" class="form__label">First Name</label>
+                </div>
+                <div class="form__div">
+                  <input type="text" name="last_name" class="form__input" placeholder=" ">
+                  <label for="" class="form__label">Last Name</label>
+                </div>
+
+                 <div class="form__div">
+                  <input type="text" name="username" class="form__input" placeholder=" ">
+                  <label for="" class="form__label">Username</label>
+                </div>
+       <!-- email -->
+                <div class="form__div">
+                    <input type="email" name="email" class="form__input" placeholder=" ">
+                    <label for="" class="form__label">Email</label>
+                </div>
+    <!-- username -->
+
+
+   <!-- state -->
+
+              <div class="form__div">
+                    <input type="password" name="password1" class="form__input" placeholder=" ">
+                    <label for="" class="form__label">Password</label>
+                </div>
+
+                <div class="form__div">
+                    <input type="password" name="password2" class="form__input" placeholder=" ">
+                    <label for="" class="form__label">Confirm Password</label>
+                </div>
+
+
+                <!-- submit button -->
+                <input type="submit" class="form__button" value="Sign Up">
+<form>
+
+    {% endblock %}

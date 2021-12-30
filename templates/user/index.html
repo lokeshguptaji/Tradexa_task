@@ -1,0 +1,21 @@
+{% extends 'user/base.html' %}
+
+{% block body %}
+<div class="container">
+    <h1>Create a Post</h1>
+<form action="" class="form" method="post">{% csrf_token %}
+<div id="user-info">
+						<div class="form-field">
+							UserName:<input required class="form-control" type="text" name="user" value="{{ request.user.username }}">
+						</div>
+</div>
+
+
+<div class="input-group">
+  <span class="input-group-text">With textarea</span>
+  <textarea class="form-control" name="text" aria-label="With textarea"></textarea>
+</div>
+<input id="form-button" class="btn btn-success btn-block my-2" type="submit" value="Save Post">
+</form>
+    </div>
+{% endblock %}
